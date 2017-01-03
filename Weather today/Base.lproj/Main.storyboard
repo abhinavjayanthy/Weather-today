@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_today" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoldenGate.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-VO-MME">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVT-Kh-V1y">
+                                <rect key="frame" x="44" y="45" width="287" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg.. San Fransisco" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BoC-Nb-ifb">
+                                <rect key="frame" x="16" y="141.5" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StQ-Sz-McP">
+                                <rect key="frame" x="85" y="196.5" width="204" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hh-7W-3ne"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkJ-qP-ztx">
+                                <rect key="frame" x="16" y="268.5" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the city :" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvx-ar-aGh">
+                                <rect key="frame" x="16" y="91" width="343" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qvx-ar-aGh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FiT-e2-g7v"/>
+                            <constraint firstItem="BoC-Nb-ifb" firstAttribute="top" secondItem="Qvx-ar-aGh" secondAttribute="bottom" constant="22.5" id="J9o-Mv-Xhs"/>
+                            <constraint firstItem="StQ-Sz-McP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="LnH-Zi-3KW"/>
+                            <constraint firstItem="OY7-VO-MME" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="PlD-5j-4Nd"/>
+                            <constraint firstItem="OY7-VO-MME" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q1N-3t-gfz"/>
+                            <constraint firstItem="MVT-Kh-V1y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="28" id="Woh-9o-RF2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KkJ-qP-ztx" secondAttribute="trailing" id="Xgo-0B-ju5"/>
+                            <constraint firstItem="OY7-VO-MME" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ZTy-Qs-TfZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="StQ-Sz-McP" secondAttribute="trailing" constant="70" id="cG9-SE-FFi"/>
+                            <constraint firstItem="BoC-Nb-ifb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dSc-z3-TX4"/>
+                            <constraint firstItem="Qvx-ar-aGh" firstAttribute="top" secondItem="MVT-Kh-V1y" secondAttribute="bottom" constant="11" id="ggd-dk-lpG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KkJ-qP-ztx" secondAttribute="leading" id="im4-5T-nux"/>
+                            <constraint firstItem="KkJ-qP-ztx" firstAttribute="top" secondItem="StQ-Sz-McP" secondAttribute="bottom" constant="30" id="mNC-9I-71m"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MVT-Kh-V1y" secondAttribute="trailing" constant="28" id="nSf-eo-LSk"/>
+                            <constraint firstItem="StQ-Sz-McP" firstAttribute="top" secondItem="BoC-Nb-ifb" secondAttribute="bottom" constant="25" id="oEV-V5-fhs"/>
+                            <constraint firstItem="Qvx-ar-aGh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="poa-Oh-c61"/>
+                            <constraint firstItem="OY7-VO-MME" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q7E-sx-4T6"/>
+                            <constraint firstItem="BoC-Nb-ifb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qP8-G6-II7"/>
+                            <constraint firstItem="MVT-Kh-V1y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="uJa-Oh-gbg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityName" destination="BoC-Nb-ifb" id="cXk-mc-UlM"/>
+                        <outlet property="resultLabel" destination="KkJ-qP-ztx" id="gTL-iy-bBF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GoldenGate.jpg" width="6000" height="4000"/>
+    </resources>
+</document>
